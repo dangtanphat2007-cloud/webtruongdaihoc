@@ -98,7 +98,7 @@
                 <h3 class="text-lg font-bold hcmue-text-yellow mb-4">Về Chúng Tôi</h3>
                 <ul class="space-y-2">
                     <li><a href="#trangchu" data-page="lichsu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Lịch sử Phát triển</a></li>
-                    <li><a href="#trangchu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Ban Giám Hiệu</a></li>
+                    <li><a href="#trangchu" data-page="bangiamhieu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Ban Giám Hiệu</a></li>
                     <li><a href="#trangchu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Cơ cấu Tổ chức</a></li>
                 </ul>
             </div>
@@ -130,6 +130,27 @@
         });
 
         const pages = {
+            bangiamhieu: `
+    <div class="bg-white p-8 rounded-xl shadow-2xl mt-8">
+        <h1 class="text-4xl font-extrabold text-blue-700/80 mb-6 border-b-4 border-blue-300 inline-block pb-1">
+            Ban Giám Hiệu
+        </h1>
+        <p class="text-gray-700 mb-4">
+            Ban Giám hiệu Trường Đại học Sư phạm TPHCM bao gồm Hiệu trưởng và các Phó Hiệu trưởng. Ngoài ra, NGƯT. TS Nguyễn Thị Minh Hồng giữ chức vụ Chủ tịch Hội đồng trường nhiệm kỳ 2020-2025.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li><span class="font-semibold">Hiệu trưởng:</span> GS. TS Huỳnh Văn Sơn</li>
+            <li><span class="font-semibold">Phó Hiệu trưởng:</span>
+                <ul class="list-circle list-inside ml-5 space-y-1">
+                    <li>TS. Bùi Trần Quỳnh Ngọc</li>
+                    <li>ThS. Nguyễn Ngọc Trung</li>
+                    <li>TS. Cao Anh Tuấn</li>
+                </ul>
+            </li>
+            <li><span class="font-semibold">Chủ tịch Hội đồng trường:</span> NGƯT. TS Nguyễn Thị Minh Hồng</li>
+        </ul>
+    </div>
+`,
             lichsu: `
                   <div class="bg-white p-8 rounded-xl shadow-2xl">
         <h1 class="text-4xl font-extrabold text-red-600 mb-6 border-b-4 border-red-600 inline-block pb-1">
