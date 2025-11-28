@@ -1,46 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HCMUE - Trang Thông Tin</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại học Sư phạm TP. Hồ Chí Minh - HCMUE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
-<body class="bg-gray-100 text-gray-900">
+<header class="hcmue-bg-blue shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+                <a href="#trangchu" class="flex items-center space-x-3 nav-link" data-page="trangchu">
+                    <img src="https://haitrieu.com/wp-content/uploads/2022/02/Logo-DH-Su-Pham-TPHCM-HCMUE-768x374.png" 
+                         alt="Logo Đại học Sư phạm TP.HCM" 
+                         class="h-12 object-contain">
+                </a>
+            </div>
+            
+            <nav class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="#trangchu" data-page="trangchu" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Trang Chủ</a>
+                    <a href="#tuyensinh" data-page="tuyensinh" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Tuyển Sinh</a>
+                    <a href="#daotao" data-page="daotao" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Đào Tạo</a>
+                    <a href="#nghiencuu" data-page="nghiencuu" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Nghiên Cứu</a>
+                    <a href="#lienhe" data-page="lienhe" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Liên Hệ</a>
+                </div>
+            </nav>
 
-    <!-- Navigation -->
-    <nav class="hcmue-bg-blue text-white shadow-lg">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="font-bold text-2xl">HCMUE</div>
-            <ul class="hidden md:flex space-x-6 font-medium">
-                <li><a href="#" data-page="trangchu" class="nav-link">Trang Chủ</a></li>
-                <li><a href="#" data-page="tuyensinh" class="nav-link">Tuyển Sinh</a></li>
-                <li><a href="#" data-page="daotao" class="nav-link">Đào Tạo</a></li>
-                <li><a href="#" data-page="nghiencuu" class="nav-link">Nghiên Cứu</a></li>
-                <li><a href="#" data-page="lienhe" class="nav-link">Liên Hệ</a></li>
-            </ul>
+            <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-md text-white hover:bg-white hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-900 focus:ring-white">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
 
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-2xl">☰</button>
-            </div>
-        </div>
+    <div class="md:hidden hidden hcmue-bg-blue" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#trangchu" data-page="trangchu" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Trang Chủ</a>
+            <a href="#tuyensinh" data-page="tuyensinh" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Tuyển Sinh</a>
+            <a href="#daotao" data-page="daotao" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Đào Tạo</a>
+            <a href="#nghiencuu" data-page="nghiencuu" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Nghiên Cứu</a>
+            <a href="#lienhe" data-page="lienhe" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white hover:text-gray-800 transition duration-150">Liên Hệ</a>
+        </div>
+    </div>
+</header>
 
-        <ul id="mobile-menu" class="md:hidden hidden bg-blue-800">
-            <li><a href="#" data-page="trangchu" class="block py-2 px-4 nav-link">Trang Chủ</a></li>
-            <li><a href="#" data-page="tuyensinh" class="block py-2 px-4 nav-link">Tuyển Sinh</a></li>
-            <li><a href="#" data-page="daotao" class="block py-2 px-4 nav-link">Đào Tạo</a></li>
-            <li><a href="#" data-page="nghiencuu" class="block py-2 px-4 nav-link">Nghiên Cứu</a></li>
-            <li><a href="#" data-page="lienhe" class="block py-2 px-4 nav-link">Liên Hệ</a></li>
-        </ul>
-    </nav>
+<main class="min-h-screen">
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div id="content-area" class="px-4 py-6 sm:px-0">
+            <div class="text-center p-8">
+                <h2 class="text-2xl font-semibold text-gray-700">Đang tải nội dung...</h2>
+            </div>
+        </div>
+    </div>
+</main>
 
-    <!-- Nội dung -->
-    <main id="content-area" class="container mx-auto px-6 py-10"></main>
+<footer class="hcmue-bg-blue text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-blue-700 pb-6">
+            <div>
+                <h3 class="text-lg font-bold hcmue-text-yellow mb-4">Liên Hệ</h3>
+                <p class="text-sm">Trường Đại học Sư phạm TP. Hồ Chí Minh</p>
+                <p class="text-sm mt-2">Địa chỉ: 280 An Dương Vương, Phường 4, Quận 5, TP.HCM</p>
+                <p class="text-sm">Điện thoại: (028) 38352020</p>
+                <p class="text-sm">Email: p.ctctsv@hcmue.edu.vn</p>
+            </div>
 
-    <!-- JS -->
+            <div>
+                <h3 class="text-lg font-bold hcmue-text-yellow mb-4">Đường Dẫn Nhanh</h3>
+                <ul class="space-y-2">
+                    <li><a href="#tuyensinh" data-page="tuyensinh" class="nav-link text-sm hover:text-gray-300 transition duration-150">Thông tin Tuyển Sinh</a></li>
+                    <li><a href="#daotao" data-page="daotao" class="nav-link text-sm hover:text-gray-300 transition duration-150">Các Khoa & Ngành</a></li>
+                    <li><a href="#nghiencuu" data-page="nghiencuu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Thư viện Số</a></li>
+                    <li><a href="#lienhe" data-page="lienhe" class="nav-link text-sm hover:text-gray-300 transition duration-150">Sơ đồ Trường</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold hcmue-text-yellow mb-4">Về Chúng Tôi</h3>
+                <ul class="space-y-2">
+                    <li><a href="#trangchu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Lịch sử Phát triển</a></li>
+                    <li><a href="#trangchu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Ban Giám Hiệu</a></li>
+                    <li><a href="#trangchu" class="nav-link text-sm hover:text-gray-300 transition duration-150">Cơ cấu Tổ chức</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold hcmue-text-yellow mb-4">Theo Dõi</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-150">FB</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-150">YT</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-150">Zalo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center text-sm text-gray-400">
+            &copy; 2025 Đại học Sư phạm TP. Hồ Chí Minh. Bảo lưu mọi quyền.
+        </div>
+    </div>
+</footer>
     <script src="sch.js"></script>
 </body>
 
