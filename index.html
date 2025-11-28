@@ -127,6 +127,13 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+        e.preventDefault();
+        const page = link.dataset.page;
+        contentArea.innerHTML = pages[page];
+    });
+});
 
         const pages = {
             trangchu: `
